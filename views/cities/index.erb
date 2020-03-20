@@ -1,0 +1,6 @@
+<h1>This is the City Bucket List</h1>
+<p><% for city in @cities %></p>
+<p>City Name: <%= city.name %></p>
+<p><a href="/cities/<%= city.id %>">Show City</a></p>
+<hr></hr>
+<p><% end %></p>

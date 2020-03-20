@@ -4,7 +4,7 @@ require("pry-byebug")
 
 require_relative("../models/city")
 require_relative("../models/country")
-also_reload("../models/*"")
+also_reload("../models/*")
 
 #CRUD - READ / index / GET
 get '/countries' do

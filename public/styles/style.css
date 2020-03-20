@@ -1,0 +1,25 @@
+body {
+  background: white url('/images/nyc_skyline.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: darkblue;
+  font-family: 'Merriweather', serif;
+  padding: 0px;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 48pt;
+  color: darkred;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+a, a:link, a:visited {
+  color: darkred;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: darkblue;
+}
