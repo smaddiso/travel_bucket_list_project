@@ -1,6 +1,5 @@
-<h1>This is the Country Bucket List</h1>
+<h2>Country Bucket List</h2>
 <p><% for country in @countries %></p>
-<p>Country Name: <%= country.name %></p>
-<p><a href="/countries/<%= country.id %>">Show Country</a></p>
-<hr></hr>
+<p>Country Name: <%= country.name %><a href="/countries/<%= country.id %>"> - Show Country</a></p>
+<hr color="lightblue" align="left" width="75%"></hr>
 <p><% end %></p>

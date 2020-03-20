@@ -18,4 +18,12 @@ class City
     @id = city_data.first()["id"].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM cities"
+    city_data = SqlRunner.run(sql)
+    result = city_data.map{|city| City.new(city)}
+    return result
+  end
+
+
 end

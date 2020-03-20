@@ -8,7 +8,8 @@ also_reload("../models/*")
 
 #CRUD - READ / index / GET
 get '/countries' do
-
+  @countries = Country.all()
+  erb(:"countries/index")
 end
 
 #CRUD - CREATE  / new / GET
