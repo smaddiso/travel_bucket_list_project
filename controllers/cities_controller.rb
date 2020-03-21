@@ -19,7 +19,8 @@ end
 
 #CRUD - READ / show / GET
 get '/cities/:id' do
-
+  @city = City.find(params[:id].to_i())
+  erb (:"cities/show")
 end
 
 #CRUD - CREATE/ create / POST

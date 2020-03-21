@@ -25,5 +25,12 @@ class City
     return result
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM cities WHERE id = $1"
+    values = [id]
+    city_data = SqlRunner.run(sql, values)
+    result = City.new(city_data.first)
+    return result
+  end
 
 end
