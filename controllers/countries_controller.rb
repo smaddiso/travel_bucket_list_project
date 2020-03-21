@@ -19,7 +19,8 @@ end
 
 #CRUD - READ / show / GET
 get '/countries/:id' do
-
+  @country = Country.find(params[:id].to_i())
+  erb (:"countries/show")
 end
 
 #CRUD - CREATE/ create / POST

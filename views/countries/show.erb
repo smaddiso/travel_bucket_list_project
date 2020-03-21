@@ -1,0 +1,6 @@
+<p>Countries</p>
+<p>Name: <%= @country.name %></p>
+<a href="/countries/<%= @country.id %>/edit">Edit Country</a>
+<form action="/countries/<%= @country.id %>/delete" method="post">
+    <input type="submit" value="Delete Country"/>
+</form>

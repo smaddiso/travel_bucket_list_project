@@ -1,5 +1,6 @@
-<h2>Country Bucket List</h2>
+<h2>Click to show country details:</h2>
 <p><% for country in @countries %></p>
-<p>Country Name: <%= country.name %><a href="/countries/<%= country.id %>"> - Show Country</a></p>
-<hr color="lightblue" align="left" width="75%"></hr>
+<ul>
+<p><a href="/countries/<%= country.id %>"><%= country.name %></a></p>
+</ul>
 <p><% end %></p>
