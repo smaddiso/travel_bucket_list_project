@@ -5,8 +5,11 @@
     <input id="country-name" type="text" name="name"/>
 </ul>
 <ul>
-  <label for="country-visited">Country Visited (true/false):</label>
-    <input id="country-visited" type="text" name="country_visited"/>
+  <label for="country-visited">Country Visited:</label>
+    <select id="country-visited" name="country_visited">
+        <option value="true">Yes</option>
+        <option value="false" selected>Not Yet</option>
+    </select>
 </ul>
 
   <input type="submit" value="Create Country"/>

@@ -5,11 +5,15 @@
     <input id="city-name" type="text" name="name"/>
 </ul>
 <ul>
-  <label for="city-visited">City Visited (true/false):</label>
-    <input id="city-visited" type="text" name="city_visited"/>
+  <label for="city-visited">City Visited:</label>
+    <select id="city-visited" name="city_visited">
+        <option value="true">Yes</option>
+        <option value="false" selected>Not Yet</option>
+    </select>
+
 </ul>
 <ul>
-<label for="country-select">Select the city's country:</label>
+<label for="country-select">City's Country:</label>
   <select id="country-select" name="country_id">
     <% for country in @countries %>
     <option value=<%= country.id %>><%= country.name %></option>
