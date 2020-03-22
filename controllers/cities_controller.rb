@@ -14,7 +14,8 @@ end
 
 #CRUD - CREATE  / new / GET
 get '/cities/new' do
-
+  @countries = Country.all()
+  erb(:"cities/new")
 end
 
 #CRUD - READ / show / GET
@@ -25,7 +26,9 @@ end
 
 #CRUD - CREATE/ create / POST
 post '/cities' do
-
+  @city = City.new(params)
+  @city.save
+  erb (:"cities/create")
 end
 
 #CRUD - UPDATE / edit / GET
