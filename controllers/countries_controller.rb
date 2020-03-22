@@ -15,7 +15,7 @@ end
 #CRUD - CREATE  / new / GET
 get '/countries/new' do
   @countries = Country.all()
-  erb(:new)
+  erb(:"countries/new")
 end
 
 #CRUD - READ / show / GET
