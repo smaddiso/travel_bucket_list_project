@@ -25,7 +25,9 @@ end
 
 #CRUD - CREATE/ create / POST
 post '/countries' do
-
+  @country = Country.new(params)
+  @country.save
+  erb (:"countries/create")
 end
 
 #CRUD - UPDATE / edit / GET
