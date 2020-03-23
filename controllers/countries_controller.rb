@@ -33,12 +33,14 @@ end
 
 #CRUD - UPDATE / edit / GET
 get '/countries/:id/edit' do
-
+  @country = Country.find(params[:id].to_i())
+  erb(:"countries/edit")
 end
 
 #CRUD - UPDATE / update / POST
 post '/countries/:id' do
-
+  Country.new(params).update()
+  redirect to '/countries'
 end
 
 #CRUD - DELETE / delete / POST

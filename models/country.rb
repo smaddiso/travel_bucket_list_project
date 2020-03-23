@@ -32,4 +32,10 @@ class Country
     return result
   end
 
+  def update()
+    sql = "UPDATE countries SET (name, country_visited) = ($1, $2) WHERE id = $3"
+    values = [@name, @country_visited]
+    SqlRunner.run(sql, values)
+  end
+
 end
