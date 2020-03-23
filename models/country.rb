@@ -34,7 +34,7 @@ class Country
 
   def update()
     sql = "UPDATE countries SET (name, country_visited) = ($1, $2) WHERE id = $3"
-    values = [@name, @country_visited]
+    values = [@name, @country_visited, @id]
     SqlRunner.run(sql, values)
   end
 

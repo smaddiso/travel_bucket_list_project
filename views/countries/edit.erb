@@ -1,8 +1,10 @@
 <form action="/countries/<%= @country.id %>" method="post">
+
 <ul>
   <label for="country-name">Country Name:</label>
     <input id="country-name" type="text" name="name" value="<%= @country.name %>"/>
 </ul>
+
 <ul>
   <label for="country-visited">Country Visited:</label>
     <select id="country-visited" name="country_visited">
