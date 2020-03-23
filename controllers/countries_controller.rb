@@ -45,5 +45,6 @@ end
 
 #CRUD - DELETE / delete / POST
 post '/countries/:id/delete' do
-
+  Country.find(params[:id].to_i()).delete()
+  redirect to '/countries'
 end

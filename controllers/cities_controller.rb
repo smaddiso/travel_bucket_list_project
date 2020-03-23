@@ -32,16 +32,20 @@ post '/cities' do
 end
 
 #CRUD - UPDATE / edit / GET
-get '/citiess/:id/edit' do
-
+get '/cities/:id/edit' do
+  @countries = Country.all()
+  @city = City.find(params[:id].to_i())
+  erb (:"cities/edit")
 end
 
 #CRUD - UPDATE / update / POST
 post '/cities/:id' do
-
+  City.new(params).update()
+  redirect to '/cities'
 end
 
 #CRUD - DELETE / delete / POST
 post '/cities/:id/delete' do
-
+  City.find(params[:id].to_i()).delete()
+  redirect to '/cities'
 end
