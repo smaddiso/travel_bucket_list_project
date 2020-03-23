@@ -3,13 +3,32 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   color: darkblue;
-  font-family: 'Merriweather', serif;
+  /* font-family: 'Merriweather', serif; */
+  font-family: 'Verdana', sans-serif;
   padding: 0px;
   margin: 20px;
 }
 
+h1, h2, h3 {
+  font-family: 'Verdana', sans-serif;
+}
+
 h1 {
   font-size: 48pt;
+  color: darkred;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-size: 32pt;
+  color: darkred;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-size: 16pt;
   color: darkred;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -23,6 +42,3 @@ a, a:link, a:visited {
 a:hover, a:active, a:focus {
   color: darkblue;
 }
-
-nav ul{height:200px; width:50%;}
-nav ul{overflow:hidden; overflow-y:scroll;}

@@ -1,11 +1,7 @@
-<h2>Click to edit or delete country:</h2>
+<h2>Click to edit or delete <%= @country.name %></h2>
 
-<ul>
-<p><%= @country.name %></p>
-</ul>
-
-<a href="/countries/<%= @country.id %>/edit">Edit Country</a>
+<h3><a href="/countries/<%= @country.id %>/edit">Edit <%= @country.name %></a></h3>
 
 <form action="/countries/<%= @country.id %>/delete" method="post">
-    <input type="submit" onclick="return confirm('Are you sure you want to delete the country?')" value="Delete Country"/>
+    <input type="submit" onclick="return confirm('Are you sure you want to delete the country?')" value="Delete <%= @country.name %>"/>
 </form>
