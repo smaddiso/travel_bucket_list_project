@@ -7,5 +7,5 @@
 <a href="/cities/<%= @city.id %>/edit">Edit City</a>
 
 <form action="/cities/<%= @city.id %>/delete" method="post">
-    <input type="submit" value="Delete City"/>
+    <input type="submit" onclick="return confirm('Are you sure you want to delete the city?')"value="Delete City"/>
 </form>
