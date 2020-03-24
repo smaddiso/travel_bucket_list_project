@@ -1,3 +1,5 @@
+<h1>Edit <%= @country.name %>'s name and record that you have visited the country:</h1>
+
 <form action="/countries/<%= @country.id %>" method="post">
 
 <ul>
@@ -13,6 +15,6 @@
     </select>
 </ul>
 
-  <input type="submit" value="Save Country"/>
+  <input type="submit" value="Save <%= @country.name %>"/>
 
 </form>

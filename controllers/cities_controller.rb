@@ -21,6 +21,7 @@ end
 #CRUD - READ / show / GET
 get '/cities/:id' do
   @city = City.find(params[:id].to_i())
+  @countries = Country.all()
   erb (:"cities/show")
 end
 

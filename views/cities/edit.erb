@@ -1,16 +1,10 @@
+<h1>Edit <%= @city.name %>'s name and country and record that you have visited the city:</h1>
+
 <form action="/cities/<%= @city.id %>" method="post">
 
 <ul>
   <label for="city-name">City Name:</label>
     <input id="city-name" type="text" name="name" value="<%= @city.name %>"/>
-</ul>
-
-<ul>
-  <label for="city-visited">City Visited:</label>
-    <select id="city-visited" name="city_visited">
-      <option value="true"<%= "selected" if @city.city_visited == "t" %>>Yes</option>
-      <option value="false"<%= "selected" if @city.city_visited == "f" %>>Not Yet</option>
-    </select>
 </ul>
 
 <ul>
@@ -26,6 +20,14 @@
   </select>
 </ul>
 
-  <input type="submit" value="Save City"/>
+<ul>
+  <label for="city-visited">City Visited:</label>
+    <select id="city-visited" name="city_visited">
+      <option value="true"<%= "selected" if @city.city_visited == "t" %>>Yes</option>
+      <option value="false"<%= "selected" if @city.city_visited == "f" %>>Not Yet</option>
+    </select>
+</ul>
+
+  <input type="submit" value="Save <%= @city.name %>"/>
 
 </form>

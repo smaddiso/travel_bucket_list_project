@@ -9,7 +9,6 @@ also_reload("../models/*")
 #CRUD - READ / index / GET
 get '/countries' do
   @countries = Country.all()
-  @cities = City.all()[0]
   erb(:"countries/index")
 end
 
@@ -22,6 +21,7 @@ end
 #CRUD - READ / show / GET
 get '/countries/:id' do
   @country = Country.find(params[:id].to_i())
+  @cities = City.all()
   erb (:"countries/show")
 end
 
