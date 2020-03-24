@@ -35,8 +35,8 @@ nav {
 
 pg-head-style {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 40pt;
   font-weight: bold;
+  font-size: 40pt;
   color: darkblue;
 }
 
@@ -77,15 +77,15 @@ table, th, td {
   border: 1px solid darkblue;
   text-align: left;
   vertical-align: top;
-  width: 500px;
+  width: 550px;
   padding: 10px;
   margin-top: 30px;
   font-family: 'Ubuntu', sans-serif;
+  column-width: 275px;
 }
 
 th {
   text-align: center;
   vertical-align: middle;
   background-color: lightblue;
-  font-weight: bold;
 }

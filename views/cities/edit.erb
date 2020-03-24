@@ -12,9 +12,9 @@
   <select name="country_id" id="country-select" selected="<%= @city.country_id %>">
     <% @countries.each do |country| %>
       <% if country.id == @city.country_id %>
-        <option value=<%= country.id %> selected><%= country.name.capitalize %></option>
+        <option value=<%= country.id %> selected><%= country.name %></option>
       <% else %>
-        <option value=<%= country.id %>><%= country.name.capitalize %></option>
+        <option value=<%= country.id %>><%= country.name %></option>
       <% end %>
     <% end %>
   </select>
