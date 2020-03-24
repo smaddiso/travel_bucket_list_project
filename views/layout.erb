@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>Travel Bucket List</title>
-  <link rel="stylesheet" href="/styles/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
-  <h1>Travel Bucket List</h1>
+  <pg-head-style>Travel Bucket List</pg-head-style>
   <nav>
-      <h2>Menu > <a href="/">Home</a> | <a href="/countries">Countries</a> | <a href="/cities">Cities</a></h2>
+      <pg-menu-style>Menu: <a href="/">Home</a> | <a href="/countries">Countries</a> | <a href="/cities">Cities</a></pg-menu-style>
   </nav>
   <hr color="darkblue" align="left" width="75%"></hr>
   <%= yield %>

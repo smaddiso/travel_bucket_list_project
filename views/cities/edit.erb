@@ -12,14 +12,18 @@
       <option value="false"<%= "selected" if @city.city_visited == "f" %>>Not Yet</option>
     </select>
 </ul>
-<p><%= @city.country_id %></p>
+
 <ul>
   <label for="country-select">City's Country:</label>
-    <select id="country-select" name="country_id">
-      <% for country in @countries %>
-      <option value=<%= country.id %><%= "selected" if @city.country_id == country.id %>><%= country.name %></option>
+  <select name="country_id" id="country-select" selected="<%= @city.country_id %>">
+    <% @countries.each do |country| %>
+      <% if country.id == @city.country_id %>
+        <option value=<%= country.id %> selected><%= country.name.capitalize %></option>
+      <% else %>
+        <option value=<%= country.id %>><%= country.name.capitalize %></option>
       <% end %>
-    </select>
+    <% end %>
+  </select>
 </ul>
 
   <input type="submit" value="Save City"/>

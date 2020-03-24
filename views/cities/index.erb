@@ -1,7 +1,10 @@
-<h2>Click to show city details:</h2>
-<p><% for city in @cities %></p>
-<ul>
-<h3><a href="/cities/<%= city.id %>"><%= city.name %></a></h3>
-</ul>
-<p><% end %></p>
-<h3><a href="/cities/new">Click to add a new city</a></h3>
+<h1>This is your city bucket list. Click the cities to edit their details:</h1>
+<p></p>
+
+<% for city in @cities %>
+<li>
+<a href="/cities/<%= city.id %>"><%= city.name %></a>
+</li>
+<% end %>
+
+<p><a href="/cities/new">Click here to add a new city!</a></P>

@@ -3,35 +3,38 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   color: darkblue;
-  /* font-family: 'Merriweather', serif; */
-  font-family: 'Verdana', sans-serif;
+  /* font-family: 'Ubuntu', sans-serif; */
   padding: 0px;
-  margin: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
-h1, h2, h3 {
-  font-family: 'Verdana', sans-serif;
+p {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h1 {
-  font-size: 48pt;
-  color: darkred;
-  margin-top: 0px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15pt;
+  color: darkblue;
+  margin-top: 40px;
   margin-bottom: 0px;
 }
 
-h2 {
-  font-size: 32pt;
-  color: darkred;
-  margin-top: 0px;
-  margin-bottom: 0px;
+nav {
+  margin-top: 5px;
 }
 
-h3 {
-  font-size: 16pt;
-  color: darkred;
-  margin-top: 0px;
-  margin-bottom: 0px;
+pg-head-style {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 40pt;
+  font-weight: bold;
+  color: darkblue;
+}
+
+pg-menu-style {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15pt;
 }
 
 a, a:link, a:visited {
@@ -41,4 +44,15 @@ a, a:link, a:visited {
 
 a:hover, a:active, a:focus {
   color: darkblue;
+  text-decoration: none;
+}
+
+li {
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 20px;
+}
+
+ul {
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 20px;
 }

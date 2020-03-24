@@ -1,7 +1,10 @@
-<h2>Click to show country details:</h2>
-<p><% for country in @countries %></p>
-<ul>
-<h3><a href="/countries/<%= country.id %>"><%= country.name %></a></h3>
-</ul>
-<p><% end %></p>
-<h3><a href="/countries/new">Click to add a new country</a></h3>
+<h1>This is your country bucket list. Click the countries to edit their details:</h1>
+<p></p>
+
+<% for country in @countries %>
+<li>
+<a href="/countries/<%= country.id %>"><%= country.name %></a>
+</li>
+<% end %>
+
+<p><a href="/countries/new">Click here to add a new country!</a></p>
