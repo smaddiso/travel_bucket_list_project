@@ -1,10 +1,33 @@
-<h1>This is your city bucket list. Click the cities to edit their details:</h1>
-<p></p>
+<h1>There are <%= @cities.length() %> cities in your bucket list. Click the countries to edit their details:</h1>
 
-<% for city in @cities %>
-<li>
-<a href="/cities/<%= city.id %>"><%= city.name %></a>
-</li>
-<% end %>
+<table>
+  <tr>
+    <th>
+      Cities Visited
+    </th>
+    <th>
+      Cities not yet Visited
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <% for city in @cities %>
+        <% if city.city_visited == "t" %>
+          <li>
+            <a href="/cities/<%= city.id %>"><%= city.name %></a>
+          </li>
+        <% end %>
+      <% end %>
+    </td>
+    <td>
+      <% for city in @cities %>
+        <% if city.city_visited == "f" %>
+          <li>
+            <a href="/cities/<%= city.id %>"><%= city.name %></a>
+          </li>
+        <% end %>
+      <% end %>
+    </td>
+</table>
 
 <p><a href="/cities/new">Click here to add a new city!</a></P>
