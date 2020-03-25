@@ -5,7 +5,7 @@ body {
   color: darkblue;
   /* font-family: 'Ubuntu', sans-serif; */
   padding: 0px;
-  margin-left: 20px;
+  margin-left: 40px;
   margin-top: 20px;
 }
 
@@ -25,7 +25,7 @@ h2 {
   font-family: 'Ubuntu', sans-serif;
   font-size: 25pt;
   color: darkblue;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 0px;
 }
 
@@ -88,4 +88,18 @@ th {
   text-align: center;
   vertical-align: middle;
   background-color: lightblue;
+}
+
+my-name {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 10pt;
+  font-style: italic;
+}
+
+.app-features {
+  margin-left: 30px;
+  margin-top: 30px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16pt;
+  line-height: 1.5;
 }

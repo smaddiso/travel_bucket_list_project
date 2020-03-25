@@ -1,16 +1,10 @@
-<h1>Click below to edit or delete <%= @country.name %>:</h1>
+<h2><%= @country.name %></h2>
 
-<p><a href="/countries/<%= @country.id %>/edit">Edit <%= @country.name %></a></p>
+<p><a href="/countries/<%= @country.id %>/edit">Edit Details</a></p>
 
-<p></p>
+<h1>Any cities in <%= @country.name %> that are in your bucket list are shown below</h1>
 
-<form action="/countries/<%= @country.id %>/delete" method="post">
-    <input type="submit" onclick="return confirm('Are you sure you want to delete the country?')" value="Delete <%= @country.name %>"/>
-</form>
-
-<p></p>
-
-<h1>Any cities in <%= @country.name %> that are in your bucket list are shown below:</h1>
+<p>Click the cities to edit their details</p>
 
 <table>
   <tr>
@@ -46,4 +40,8 @@
     </td>
 </table>
 
-<p>Click the cities to edit their details</p>
+<p></p>
+
+<form action="/countries/<%= @country.id %>/delete" method="post">
+    <input type="submit" onclick="return confirm('Are you sure you want to delete the country?')" value="Delete <%= @country.name %>"/>
+</form>
