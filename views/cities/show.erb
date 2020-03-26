@@ -2,10 +2,14 @@
 
 <p><a href="/cities/<%= @city.id %>/edit">Edit Details</a></p>
 
+<h1>City Review: <%= @city.review %></h1>
+
+<h1>City Rating: <%= @city.rating %>/10</h1>
+
 <% for country in @countries %>
   <% if @city.country_id == country.id %>
     <h1>
-    <%= @city.name %> is in <a href="/countries/<%= country.id %>"><%= country.name %></a>
+      <%= @city.name %> is in <a href="/countries/<%= country.id %>"><%= country.name %></a>
     </h1>
   <% end %>
 <% end %>

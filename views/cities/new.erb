@@ -2,27 +2,37 @@
 
 <form method="post" action="/cities">
 
-<ul>
-  <label for="city-name">City Name:</label>
-    <input id="city-name" type="text" name="name"/>
-</ul>
+  <ul>
+    <label for="city-name">City Name:</label>
+      <input id="city-name" type="text" name="name"/>
+  </ul>
 
-<ul>
-  <label for="city-visited">City Visited:</label>
-    <select id="city-visited" name="city_visited">
+  <ul>
+    <label for="city-visited">City Visited:</label>
+      <select id="city-visited" name="city_visited">
         <option value="true">Yes</option>
         <option value="false" selected>Not Yet</option>
-    </select>
-</ul>
+      </select>
+  </ul>
 
-<ul>
-<label for="country-select">City's Country:</label>
-  <select id="country-select" name="country_id">
-    <% for country in @countries %>
-    <option value=<%= country.id %>><%= country.name %></option>
-    <% end %>
-  </select>
-</ul>
+  <ul>
+    <label for="country-select">City's Country:</label>
+      <select id="country-select" name="country_id">
+        <% for country in @countries %>
+          <option value=<%= country.id %>><%= country.name %></option>
+        <% end %>
+      </select>
+  </ul>
+
+  <ul>
+    <label for="city-review">City Review:</label>
+      <input id="city-review" type="text" name="review"/>
+  </ul>
+
+  <ul>
+    <label for="city-rating">City Rating:</label>
+      <input id="city-rating" type="text" name="rating"/> out of 10
+  </ul>
 
   <input type="submit" value="Create City"/>
 

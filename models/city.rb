@@ -2,18 +2,20 @@ require_relative("../db/sql_runner")
 
 class City
 
-  attr_reader :id, :name, :city_visited, :country_id
+  attr_reader :id, :name, :city_visited, :review, :rating, :country_id
 
   def initialize(options)
     @id = options["id"].to_i()
     @name = options["name"]
     @city_visited = options["city_visited"]
+    @review = options["review"]
+    @rating = options["rating"]
     @country_id = options["country_id"].to_i()
   end
 
   def save()
-    sql = "INSERT INTO cities (name, city_visited, country_id) VALUES ($1, $2, $3) RETURNING *"
-    values = [@name, @city_visited, @country_id]
+    sql = "INSERT INTO cities (name, city_visited, review, rating, country_id) VALUES ($1, $2, $3, $4, $5) RETURNING *"
+    values = [@name, @city_visited, @review, @rating, @country_id]
     city_data = SqlRunner.run(sql, values)
     @id = city_data.first()["id"].to_i
   end
@@ -34,8 +36,8 @@ class City
   end
 
   def update()
-    sql = "UPDATE cities SET (name, city_visited, country_id) = ($1, $2, $3) WHERE id = $4"
-    values = [@name, @city_visited, @country_id, @id]
+    sql = "UPDATE cities SET (name, city_visited, review, rating, country_id) = ($1, $2, $3, $4, $5) WHERE id = $6"
+    values = [@name, @city_visited, @review, @rating, @country_id, @id]
     SqlRunner.run(sql, values)
   end
 

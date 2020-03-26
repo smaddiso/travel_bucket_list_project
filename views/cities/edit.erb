@@ -1,32 +1,42 @@
-<h1>Edit <%= @city.name %>'s name and country and record that you have visited the city:</h1>
+<h1>Edit <%= @city.name %>'s name, country and details of your visit:</h1>
 
 <form action="/cities/<%= @city.id %>" method="post">
 
-<ul>
-  <label for="city-name">City Name:</label>
-    <input id="city-name" type="text" name="name" value="<%= @city.name %>"/>
-</ul>
+  <ul>
+    <label for="city-name">City Name:</label>
+      <input id="city-name" type="text" name="name" value="<%= @city.name %>"/>
+  </ul>
 
-<ul>
-  <label for="country-select">City's Country:</label>
-  <select name="country_id" id="country-select" selected="<%= @city.country_id %>">
-    <% @countries.each do |country| %>
-      <% if country.id == @city.country_id %>
-        <option value=<%= country.id %> selected><%= country.name %></option>
-      <% else %>
-        <option value=<%= country.id %>><%= country.name %></option>
-      <% end %>
-    <% end %>
-  </select>
-</ul>
+  <ul>
+    <label for="country-select">City's Country:</label>
+      <select name="country_id" id="country-select" selected="<%= @city.country_id %>">
+        <% @countries.each do |country| %>
+          <% if country.id == @city.country_id %>
+            <option value=<%= country.id %> selected><%= country.name %></option>
+            <% else %>
+              <option value=<%= country.id %>><%= country.name %></option>
+            <% end %>
+          <% end %>
+      </select>
+  </ul>
 
-<ul>
-  <label for="city-visited">City Visited:</label>
-    <select id="city-visited" name="city_visited">
-      <option value="true"<%= "selected" if @city.city_visited == "t" %>>Yes</option>
-      <option value="false"<%= "selected" if @city.city_visited == "f" %>>Not Yet</option>
-    </select>
-</ul>
+  <ul>
+    <label for="city-visited">City Visited:</label>
+      <select id="city-visited" name="city_visited">
+        <option value="true"<%= "selected" if @city.city_visited == "t" %>>Yes</option>
+        <option value="false"<%= "selected" if @city.city_visited == "f" %>>Not Yet</option>
+      </select>
+  </ul>
+
+  <ul>
+    <label for="city-review">City Review:</label>
+      <input id="city-review" type="text" name="review" value="<%= @city.review %>"/>
+  </ul>
+
+  <ul>
+    <label for="city-rating">City Rating:</label>
+      <input id="city-rating" type="text" name="rating" value="<%= @city.rating %>"/> out of 10
+  </ul>
 
   <input type="submit" value="Save <%= @city.name %>"/>
 

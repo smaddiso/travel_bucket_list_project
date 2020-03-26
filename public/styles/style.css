@@ -43,15 +43,16 @@ pg-head-style {
 pg-menu-style {
   font-family: 'Ubuntu', sans-serif;
   font-size: 15pt;
+  color: darkblue;
 }
 
 a, a:link, a:visited {
-  color: darkred;
+  color: #B9732F;
   text-decoration: none;
 }
 
 a:hover, a:active, a:focus {
-  color: darkblue;
+  color: #6DAFFE;
   text-decoration: none;
 }
 
@@ -87,7 +88,7 @@ table, th, td {
 th {
   text-align: center;
   vertical-align: middle;
-  background-color: lightblue;
+  background-color: #6DAFFE;
 }
 
 my-name {
